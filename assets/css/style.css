@@ -15,18 +15,22 @@ html {
 }
 :root {
   /* Variables */
+  /* color: rgb(11, 102, 133); */
   --dark-clr: #333;
-  --primary-clr: rgba(40, 102, 8, 0.4);
+  --primary-clr: rgba(62, 161, 13, 0.4);
   --secondary-clr: #333;
-  --light-clr: #ccc;
+  --light-clr: #eee;
 
   --transition-300: 300ms;
   --transition-500: 500ms;
 
   --padding-top-100: 100px;
   --padding-bottom-100: 100px;
+
+  --margin-top-100: 100px;
+  --margin-bottom-100: 100px;
 }
-/* ::selection {
+::selection {
   color: var(--primary-clr);
   background-color: var(--light-clr);
 }
@@ -40,8 +44,7 @@ html {
 ::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-corner {
   background-color: var(--primary-clr);
-} */
-
+}
 body {
   font-family: "Cairo", sans-serif;
   overflow-x: hidden;
@@ -73,4 +76,288 @@ ul li {
   list-style: none;
   cursor: text;
 }
+a {
+  display: block;
+  text-decoration: none;
+  color: initial;
+}
+.title {
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.5em;
+  padding-bottom: 45px;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #111;
+}
+.title::before {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 60%;
+  left: 50%;
+  margin-left: -30%;
+  height: 1px;
+  content: "";
+  background-color: #777;
+  z-index: 4;
+}
+.title::after {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 0px;
+  content: "\00a7";
+  font-size: 30px;
+  line-height: 40px;
+  color: #c50000;
+  font-weight: 400;
+  z-index: 5;
+  display: block;
+  background-color: #f8f8f8;
+}
+section {
+  padding-top: var(--padding-top-100);
+}
+section:last-of-type {
+  padding-bottom: var(--padding-bottom-100);
+}
 /* === END GLOBAL === */
+
+/* === START HEADER === */
+header {
+  padding: 20px 0;
+  background-color: var(--light-clr);
+  box-shadow: 0 10px 50px 0 var(--dark-clr);
+  z-index: 99999;
+}
+header .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 99999;
+}
+@media (min-width: 1024px) {
+  header .container .menu-bars {
+    display: none;
+  }
+}
+header .container .menu-bars {
+  position: absolute;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+header .container nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+header .container nav .main-ul {
+  display: flex;
+}
+header .container nav .main-ul li a {
+  position: relative;
+  padding: 5px 10px;
+  font-weight: 600;
+  transition: var(--transition-300);
+}
+header .container nav .main-ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-clr);
+  bottom: 0;
+  left: 0;
+  transition: var(--transition-500);
+}
+@media (max-width: 1024px) {
+  header .container nav .main-ul li:last-child a:hover::before {
+    width: 0;
+  }
+}
+header .container nav .main-ul li a:hover::before {
+  width: 100%;
+}
+header .container nav .main-ul a.contact-us {
+  background-color: var(--primary-clr);
+  color: var(--light-clr);
+  border-radius: 5px;
+}
+header .container nav .main-ul a.contact-us:hover,
+header .container nav .main-ul a.registration:hover {
+  background-color: var(--light-clr);
+  color: var(--primary-clr);
+}
+header .container nav .main-ul a.registration {
+  background-color: var(--primary-clr);
+  color: var(--light-clr);
+  border-radius: 5px;
+  margin-left: 10px;
+}
+header .container nav .main-ul a.registration::before {
+  content: none;
+}
+/* Handling sub menu */
+header .container nav .sub-menu {
+  position: relative;
+}
+header .container nav .sub-menu > div {
+  display: flex;
+}
+header .open-ul-mobile {
+  display: none;
+}
+header .container nav .inner-ul {
+  display: none;
+  background-color: #ccc;
+}
+header .container nav .inner-ul li a {
+  padding: 5px 40px;
+}
+header .container nav .inner-ul li a:hover {
+  padding-left: 50px;
+}
+@media (min-width: 1024px) {
+  header .container nav .sub-menu:hover .inner-ul {
+    display: block !important;
+    border-radius: 3px;
+  }
+  header .container nav .inner-ul {
+    width: 250px;
+    position: absolute;
+  }
+}
+@media (max-width: 1024px) {
+  header .container nav .main-ul a.registration {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .sub-menu .open-ul-mobile {
+    width: 40px;
+    display: grid;
+    place-content: center;
+    border-left: 2px solid var(--primary-clr);
+    cursor: pointer;
+    font-size: 20px;
+    transition: var(--transition-300);
+  }
+}
+/* Handling menu on screen < 991 */
+@media (max-width: 1024px) {
+  header .container nav {
+    display: none;
+  }
+  header .container nav .main-ul {
+    /* display: none; */
+    border-radius: 5px;
+    width: 40%;
+    position: absolute;
+    background-color: aliceblue;
+    flex-direction: column;
+    top: 125%;
+  }
+  header .container nav li a {
+    display: block;
+    width: 100%;
+  }
+  header .container nav .inner-ul {
+    background-color: #ccc;
+  }
+  header .container nav li {
+    transition: var(--transition-300);
+  }
+  header .container nav li a:hover {
+    padding: 5px 20px;
+    padding-left: 30px;
+  }
+}
+@media (max-width: 768px) {
+  header .container nav .main-ul {
+    width: 100%;
+    left: 0;
+  }
+}
+@media (min-width: 1024px) {
+  /* To make sure that the menu will apear again on screen > 992px */
+  header .container nav {
+    display: flex !important;
+  }
+}
+/* Logo */
+header .container .logo {
+  height: 75px;
+}
+/* === END HEADER === */
+
+/* === START MAIN === */
+main .main-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: "main-content sidebar";
+}
+@media (max-width: 991px) {
+  main .main-container {
+    grid-template-columns: 60% 4 0%;
+  }
+}
+@media (max-width: 768px) {
+  main .main-container {
+    grid-template-columns: 50% 50%;
+  }
+}
+.content-side {
+  grid-area: main-content;
+}
+.sidebar-side {
+  grid-area: sidebar;
+}
+/* === END MAIN === */
+
+/* === START SIDEBAR === */
+main .main-container .sidebar-side .container {
+  border-radius: 3px;
+  border: 5px solid var(--primary-clr);
+  background-color: var(--light-clr);
+  margin-top: var(--margin-top-100);
+  padding: 20px;
+  width: 100%;
+  margin-left: 10px;
+}
+main .main-container .sidebar-side div {
+  padding: 10px 0;
+}
+main .main-container .sidebar-side div:not(:last-child) {
+  border-bottom: 2px solid var(--dark-clr);
+}
+main .main-container .sidebar-side > div p {
+  max-width: 100%;
+  text-align: justify;
+}
+/* === END SIDEBAR === */
+
+/* === START SUMMARY SECTION === */
+main .summary div img {
+  width: 100%;
+}
+main .summary div p {
+  text-align: justify;
+  font-size: 20px;
+}
+/* === END SUMMARY SECTION === */
+
+/* === START FOOTER === */
+footer {
+  background-color: var(--dark-clr);
+  padding: 10px 0;
+}
+footer .container p {
+  color: var(--light-clr);
+  text-align: center;
+}
+/* === END FOOTER === */
