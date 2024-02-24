@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 *,
 *::before,
@@ -48,6 +49,7 @@ html {
 body {
   font-family: "Cairo", sans-serif;
   overflow-x: hidden;
+  color: var(--dark-clr);
 }
 /* small */
 @media (min-width: 768px) {
@@ -72,8 +74,12 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 }
+ul,
+ol {
+  margin-inline-start: 30px;
+}
 ul li {
-  list-style: none;
+  /* list-style: none; */
   cursor: text;
 }
 a {
@@ -132,8 +138,11 @@ section:last-of-type {
 header {
   padding: 20px 0;
   background-color: var(--light-clr);
-  box-shadow: 0 10px 50px 0 var(--dark-clr);
+  box-shadow: 0 0px 50px -20px var(--dark-clr);
   z-index: 99999;
+}
+header ul {
+  list-style: none;
 }
 header .container {
   position: relative;
@@ -223,6 +232,10 @@ header .container nav .inner-ul li a {
 header .container nav .inner-ul li a:hover {
   padding-left: 50px;
 }
+/* Logo */
+header .container .logo {
+  height: 75px;
+}
 @media (min-width: 1024px) {
   header .container nav .sub-menu:hover .inner-ul {
     display: block !important;
@@ -282,6 +295,15 @@ header .container nav .inner-ul li a:hover {
     width: 100%;
     left: 0;
   }
+  header {
+    padding: 10px 0;
+  }
+  header .container .logo {
+    height: 50px;
+  }
+  header .container .menu-bars {
+    font-size: 24px;
+  }
 }
 @media (min-width: 1024px) {
   /* To make sure that the menu will apear again on screen > 992px */
@@ -289,10 +311,7 @@ header .container nav .inner-ul li a:hover {
     display: flex !important;
   }
 }
-/* Logo */
-header .container .logo {
-  height: 75px;
-}
+
 /* === END HEADER === */
 
 /* === START MAIN === */
@@ -303,12 +322,7 @@ main .main-container {
 }
 @media (max-width: 991px) {
   main .main-container {
-    grid-template-columns: 60% 4 0%;
-  }
-}
-@media (max-width: 768px) {
-  main .main-container {
-    grid-template-columns: 50% 50%;
+    display: block;
   }
 }
 .content-side {
@@ -338,6 +352,12 @@ main .main-container .sidebar-side div:not(:last-child) {
 main .main-container .sidebar-side > div p {
   max-width: 100%;
   text-align: justify;
+}
+@media (max-width: 991px) {
+  main .main-container {
+    margin-top: 0px;
+    margin-bottom: var(--margin-top-100);
+  }
 }
 /* === END SIDEBAR === */
 

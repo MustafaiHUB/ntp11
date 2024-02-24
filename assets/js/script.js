@@ -1,36 +1,36 @@
-'use strict' // strict mode
+"use strict" // strict mode
 
 // Selectors
-const menuBtn = document.querySelector('.menu-bars')
-const mainUl = document.querySelector('.main-ul')
-const mobileUlBtn = document.querySelector('.open-ul-mobile')
-const innerUl = document.querySelector('.inner-ul')
-const nav = document.querySelector('.nav')
-const scrollers = document.querySelectorAll(".scroller");
+const menuBtn = document.querySelector(".menu-bars")
+const mainUl = document.querySelector(".main-ul")
+const mobileUlBtn = document.querySelector(".open-ul-mobile")
+const innerUl = document.querySelector(".inner-ul")
+const nav = document.querySelector(".nav")
+const scrollers = document.querySelectorAll(".scroller")
 
 // Variables
-let menuFlag = false;
-let innerMenuFlag = false;
+let menuFlag = false
+let innerMenuFlag = false
 
 // Functions
 // === START HEADER HANDLING ===
-menuBtn.addEventListener('click', function () {
-    if (menuFlag) {
-        nav.style.display = 'none';
-        menuFlag = false;
-    } else {
-        nav.style.display = 'flex';
-        menuFlag = true;
-    }
+menuBtn.addEventListener("click", function () {
+  if (menuFlag) {
+    nav.style.display = "none"
+    menuFlag = false
+  } else {
+    nav.style.display = "flex"
+    menuFlag = true
+  }
 })
-mobileUlBtn.addEventListener('click', function () {
-    if (innerMenuFlag) {
-        innerUl.style.display = 'none';
-        innerMenuFlag = false;
-    } else {
-        innerUl.style.display = 'block';
-        innerMenuFlag = true;
-    }
+mobileUlBtn.addEventListener("click", function () {
+  if (innerMenuFlag) {
+    innerUl.style.display = "none"
+    innerMenuFlag = false
+  } else {
+    innerUl.style.display = "block"
+    innerMenuFlag = true
+  }
 })
 // === END HEADER HANDLING ===
 
@@ -39,26 +39,26 @@ mobileUlBtn.addEventListener('click', function () {
 // === START SCROLLER HANDLING ===
 // If a user hasn't opted in for recuded motion, then we add the animation
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
+  addAnimation()
 }
 
 function addAnimation() {
-    scrollers.forEach((scroller) => {
-        // add data-animated="true" to every `.scroller` on the page
-        scroller.setAttribute("data-animated", true);
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true)
 
-        // Make an array from the elements within `.scroller-inner`
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-        const scrollerContent = Array.from(scrollerInner.children);
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner")
+    const scrollerContent = Array.from(scrollerInner.children)
 
-        // For each item in the array, clone it
-        // add aria-hidden to it
-        // add it into the `.scroller-inner`
-        scrollerContent.forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
-        });
-    });
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true)
+      duplicatedItem.setAttribute("aria-hidden", true)
+      scrollerInner.appendChild(duplicatedItem)
+    })
+  })
 }
 // === END SCROLLER HANDLING ===

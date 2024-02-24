@@ -1,5 +1,5 @@
-'use strict' // strict mode
-const header = document.querySelector('header');
+"use strict" // strict mode
+const header = document.querySelector("header")
 
 const headerHTML = `
 <div class="container">
@@ -49,4 +49,4 @@ const headerHTML = `
 </nav>
 </div>
 `
-header.insertAdjacentHTML('beforeend', headerHTML);
+header.insertAdjacentHTML("beforeend", headerHTML)
