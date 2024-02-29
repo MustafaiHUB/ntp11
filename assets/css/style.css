@@ -361,3 +361,46 @@ footer .container p {
   text-align: center;
 }
 /* === END FOOTER === */
+
+/* === START ABOUT === */
+.about-container {
+  /*flex-flow: row wrap;*/
+  /*position: relative;*/
+  /*flex-grow: 1;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  margin-top: 50px;
+  gap: 25px;
+}
+.justify {
+}
+.about-concept-text {
+  text-align: justify;
+  font-size: 20px;
+}
+.about-header {
+  max-height: 100px;
+}
+.about-list-element-primary {
+  background-color: var(--primary-clr);
+  border-radius: 5px;
+  padding: 10px;
+}
+.about-list-element-light {
+  background-color: var(--light-clr);
+  border-radius: 5px;
+  padding: 10px;
+}
+.about-link {
+  /*color: var(--primary-clr);*/
+  font-weight: bold;
+  font-size: 20px;
+}
+.about-link:hover {
+  text-decoration: underline;
+  color: var(--primary-clr);
+}
+/* === END ABOUT === */
