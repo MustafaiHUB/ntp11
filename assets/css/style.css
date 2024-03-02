@@ -381,12 +381,48 @@ footer .container p {
   text-align: center;
 }
 /* === END FOOTER === */
+/* === START GUIDELINES PAGE === */
+.report-main {
+  box-sizing: content-box;
+  margin-bottom: 205px;
+  margin-left: 260px;
+  margin-top: 42px;
+}
+.report-div {
+  box-sizing: border-box;
+  width: 1000px;
+}
+.report-instruction {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.report-download-links {
+  display: flex;
+  margin: 20px 20px;
+  justify-content: center;
+}
+.report-download-links a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 50px 50px;
+  color: #fff;
+  border: 1px solid #008000;
+  border-radius: 40px;
+  cursor: pointer;
+  background: linear-gradient(130deg, #008000, #a8cf94);
+  transition: 0.5s;
+}
+.report-download-links a:hover {
+  color: #008000;
+}
+/* === END GUIDELINES PAGE === */
 
 /* === START ABOUT === */
 .about-container {
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   margin-top: 50px;
   gap: 25px;
 }
