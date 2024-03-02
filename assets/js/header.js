@@ -5,7 +5,7 @@ const headerHTML = `
 <div class="container">
 <a href="/index.html">
 <img
-  src="/assets/images/University_of_Jordan_Logo.png"
+  src="/ntp11/assets/images/University_of_Jordan_Logo.png"
   class="logo"
   alt="Logo"
 />
