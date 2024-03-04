@@ -16,19 +16,21 @@ let innerMenuFlag = false
 // === START HEADER HANDLING ===
 menuBtn.addEventListener("click", function () {
   if (menuFlag) {
-    nav.style.display = "none"
+    nav.style.opacity = "0"
     menuFlag = false
   } else {
-    nav.style.display = "flex"
+    nav.style.opacity = "1"
     menuFlag = true
   }
 })
 mobileUlBtn.addEventListener("click", function () {
   if (innerMenuFlag) {
-    innerUl.style.display = "none"
+    innerUl.style.height = "0px"
+    innerUl.style.opacity = "0"
     innerMenuFlag = false
   } else {
-    innerUl.style.display = "block"
+    innerUl.style.height = "165px"
+    innerUl.style.opacity = "1"
     innerMenuFlag = true
   }
 })

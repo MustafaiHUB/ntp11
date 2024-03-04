@@ -3,9 +3,9 @@ const header = document.querySelector("header")
 
 const headerHTML = `
 <div class="container">
-<a href="/index.html">
+<a href="/index.html" class="img-link">
 <img
-  src="/assets/images/University_of_Jordan_Logo.png"
+  src="/assets/images/logo_c.jpg"
   class="logo"
   alt="Logo"
 />
