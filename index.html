@@ -11,10 +11,12 @@
     <link rel="icon" href="/assets/images/favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/scroller.css" />
+    <link rel="stylesheet" href="/assets/css/slideshow.css" />
     <title>NTP11</title>
     <script src="/assets/js/header.js" defer></script>
     <script src="/assets/js/script.js" defer></script>
-    <script src="/assets/js/sidebar.js" defer></script>
+    <!-- <script src="/assets/js/sidebar.js" defer></script> -->
+    <script src="/assets/js/slideshow.js" defer></script>
   </head>
   <body>
     <!-- === START HEADER === -->
@@ -23,10 +25,75 @@
 
     <!-- === START MAIN === -->
     <main>
-      <div class="container main-container">
+      <!-- Just for index disable grid to give more space -->
+      <div class="container main-container" style="display: block">
         <div class="content-side">
           <section class="summary">
             <h1 class="title">The National Technology Parade</h1>
+            <div>
+              <div class="carousel">
+                <button
+                  class="carousel__button carousel__button--left is-hidden"
+                >
+                  <img
+                    src="https://www.iconpacks.net/icons/2/free-arrow-left-icon-3099-thumb.png"
+                    alt="left"
+                  />
+                </button>
+                <div class="carousel__track-container">
+                  <ul class="carousel__track">
+                    <li class="carousel__slide current-slide">
+                      <img
+                        class="carousel__images"
+                        src="https://www.istockphoto.com/resources/images/PhotoFTLP/P5-FEB-iStock-1394055240.jpg"
+                        alt="background-image"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        class="carousel__images"
+                        src="https://cdn-media-2.freecodecamp.org/w1280/5f9c9e44740569d1a4ca3c37.jpg"
+                        alt="background-image"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        class="carousel__images"
+                        src="https://www.istockphoto.com/resources/images/PhotoFTLP/ScienceTechnology-825180846.jpg"
+                        alt="background-image"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        class="carousel__images"
+                        src="https://images.pexels.com/photos/19682307/pexels-photo-19682307/free-photo-of-pink-flowers-on-a-shrub.jpeg"
+                        alt="background-image"
+                      />
+                    </li>
+                    <li class="carousel__slide">
+                      <img
+                        class="carousel__images"
+                        src="https://images.pexels.com/photos/19598202/pexels-photo-19598202/free-photo-of-pink-hyndrangea-flowers.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                        alt="background-image"
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <button class="carousel__button carousel__button--right">
+                  <img
+                    src="https://www.iconpacks.net/icons/2/free-arrow-left-icon-3099-thumb.png"
+                    alt="right"
+                  />
+                </button>
+                <div class="carousel__nav">
+                  <button class="carousel__indicator current-slide"></button>
+                  <button class="carousel__indicator"></button>
+                  <button class="carousel__indicator"></button>
+                  <button class="carousel__indicator"></button>
+                  <button class="carousel__indicator"></button>
+                </div>
+              </div>
+            </div>
             <div>
               <img src="/assets/images/mainPageImage.jpg" alt="Main Image" />
               <p>
