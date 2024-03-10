@@ -5,7 +5,7 @@ const headerHTML = `
 <div class="container">
 <a href="/index.html" class="img-link">
 <img
-  src="/assets/images/logo_c.jpg"
+  src="/assets/images/logo.png"
   class="logo"
   alt="Logo"
 />

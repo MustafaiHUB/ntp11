@@ -1,0 +1,14 @@
+/* === START DATES === */
+.dates-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 25px;
+}
+.dates-header {
+  /*color: var(--primary-clr);*/
+  font-weight: bold;
+  justify-content: flex-end;
+}
+/* === END DATES === */
