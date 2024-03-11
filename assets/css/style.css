@@ -18,7 +18,7 @@ html {
   /* Variables */
   /* color: rgb(11, 102, 133); */
   --dark-clr: #333;
-  --primary-clr: #8f47ed;
+  --primary-clr: #017c3b;
   --secondary-clr: #333;
   --light-clr: #eee;
 
@@ -51,6 +51,7 @@ body {
   font-family: "Cairo", sans-serif;
   overflow-x: hidden;
   color: var(--dark-clr);
+  min-height: 100vh;
 }
 /* small */
 @media (min-width: 768px) {
@@ -147,11 +148,12 @@ section:last-of-type {
   font-size: 20px;
   display: grid;
   place-items: center;
-
-  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 #scroll-top:hover {
-  background-color: var(--secondary-clr);
+  background-color: var(--light-clr);
+  color: var(--primary-clr);
 }
 /* Floating Social Media Bar Style Starts Here */
 .float-sm {
@@ -206,7 +208,7 @@ section:last-of-type {
 
 /* === START HEADER === */
 header {
-  padding: 20px 0;
+  padding: 15px 0;
   border-bottom: 2px solid var(--primary-clr);
   box-shadow: 0 0px 50px -20px var(--dark-clr);
   z-index: 99999;
@@ -219,6 +221,9 @@ header .container {
   display: flex;
   align-items: center;
   z-index: 99999;
+}
+header .img-link {
+  height: 110px;
 }
 @media (min-width: 1024px) {
   header .container .menu-bars {
@@ -308,7 +313,7 @@ header .container nav .inner-ul li a:hover {
 }
 /* Logo */
 header .container .logo {
-  height: 100px;
+  height: 100%;
   /* background-color: #008000; */
 }
 @media (min-width: 1024px) {
@@ -397,6 +402,11 @@ header .container .logo {
 /* === END HEADER === */
 
 /* === START MAIN === */
+main {
+  /* header height + footer height = 241px */
+  min-height: calc(100vh - 241px);
+  margin-block-end: 50px;
+}
 main .main-container {
   display: grid;
   grid-template-columns: 70% 30%;

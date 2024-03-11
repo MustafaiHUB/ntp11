@@ -7,7 +7,7 @@ const mobileUlBtn = document.querySelector(".open-ul-mobile")
 const innerUl = document.querySelector(".inner-ul")
 const nav = document.querySelector(".nav")
 const scrollers = document.querySelectorAll(".scroller")
-const scrollToTopButton = document.getElementById('scroll-top');
+const scrollToTopButton = document.getElementById("scroll-top")
 // Variables
 let menuFlag = false
 let innerMenuFlag = false
@@ -66,14 +66,14 @@ function addAnimation() {
 // === END SCROLLER HANDLING ===
 
 // === START SCROLL TO TOP BUTTON ===
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   if (window.scrollY.toFixed(0) > 200) {
-    scrollToTopButton.style.display = 'grid';
+    scrollToTopButton.style.opacity = "1"
   } else {
-    scrollToTopButton.style.display = 'none';
+    scrollToTopButton.style.opacity = "0"
   }
 })
-scrollToTopButton.addEventListener('click', function () {
-  document.documentElement.scrollIntoView({ behavior: 'smooth' });
+scrollToTopButton.addEventListener("click", function () {
+  document.documentElement.scrollIntoView({ behavior: "smooth" })
 })
 // === END SCROLL TO TOP BUTTON ===

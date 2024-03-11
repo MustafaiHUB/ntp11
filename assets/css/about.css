@@ -30,6 +30,7 @@ hr.style14 {
 
 .about-list-element-primary {
   background-color: var(--primary-clr);
+  color: var(--light-clr);
   border-radius: 5px;
   padding: 10px;
 }

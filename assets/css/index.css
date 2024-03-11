@@ -1,0 +1,23 @@
+.sponsors_container {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.sponsors_container > * {
+  flex: 1 1 0px;
+}
+.sponsors_container img {
+  height: 100px;
+}
+.sponsors_container .info {
+  text-align: center;
+}
+.sponsors_container .info h2 {
+  font-size: 18px;
+}
+.sponsors_container .info h3 {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}

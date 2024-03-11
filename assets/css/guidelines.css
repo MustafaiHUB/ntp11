@@ -23,14 +23,15 @@
   display: inline-block;
   padding: 10px 10px;
   margin: 50px 50px;
-  color: #fff;
-  border: 1px solid #008000;
-  border-radius: 40px;
+  color: var(--light-clr);
+  /* border: 1px solid #008000; */
+  border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(130deg, #008000, #a8cf94);
-  transition: 0.5s;
+  background-color: var(--primary-clr);
+  transition: color 0.5s, background-color 0.5s;
 }
 .report-download-links a:hover {
-  color: #008000;
+  color: var(--primary-clr);
+  background-color: var(--light-clr);
 }
 /* === END GUIDELINES PAGE === */

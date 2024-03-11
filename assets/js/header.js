@@ -50,3 +50,18 @@ const headerHTML = `
 </div>
 `
 header.insertAdjacentHTML("beforeend", headerHTML)
+
+const footerHTML = `
+    <footer>
+      <div class="container">
+        <p>Copyright &copy; 2024 | CPE Team.</p>
+      </div>
+    </footer>`
+document.body.insertAdjacentHTML("beforeend", footerHTML)
+
+if (window.location.host === "ntp11.netlify.app")
+  window.history.replaceState(
+    null,
+    "",
+    window.location.href.replace(".html", "")
+  )
