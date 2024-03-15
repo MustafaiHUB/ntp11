@@ -210,7 +210,6 @@ section:last-of-type {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  
 }
 /* Floating Social Media Bar Style Ends Here */
 /* === END GLOBAL === */
@@ -475,27 +474,36 @@ main .summary div p {
 }
 /* === END SUMMARY SECTION === */
 
-
-
-
-
 /* === START FOOTER === */
 .footerContainer {
-  background-color: #37573e;
+  background-color: var(--dark-clr);
   color: #fff;
   padding: 20px 0;
   text-align: center; /* Center align the content */
 }
 
 .footer-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   width: 100%;
 }
-
 .footer-section {
   flex: 1;
   margin-right: 20px;
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer-section {
+    margin-right: 0px;
+  }
 }
 
 .footer-section h3 {
@@ -513,7 +521,7 @@ main .summary div p {
   padding: 0;
 }
 
-.footer-section li {
+.footer-section li a {
   color: #fff;
   margin-bottom: 5px;
 }
@@ -537,6 +545,5 @@ main .summary div p {
   text-decoration: none;
   font-size: 1.2em;
   display: inline-block;
-  margin-right: 10px;
 }
 /* === END FOOTER === */
