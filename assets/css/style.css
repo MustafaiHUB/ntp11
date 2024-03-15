@@ -203,6 +203,12 @@ section:last-of-type {
 .float-fb {
   background: #3b5998;
 }
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
 /* Floating Social Media Bar Style Ends Here */
 /* === END GLOBAL === */
 
