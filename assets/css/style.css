@@ -469,13 +469,68 @@ main .summary div p {
 }
 /* === END SUMMARY SECTION === */
 
+
+
+
+
 /* === START FOOTER === */
-footer {
-  background-color: var(--dark-clr);
-  padding: 10px 0;
+.footerContainer {
+  background-color: #37573e;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center; /* Center align the content */
 }
-footer .container p {
-  color: var(--light-clr);
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 0;
+}
+
+.footer-section ul {
+  color: #fff;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
   text-align: center;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin-bottom: 5px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  margin-right: 10px;
 }
 /* === END FOOTER === */
