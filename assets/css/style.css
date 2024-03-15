@@ -53,6 +53,9 @@ body {
   color: var(--dark-clr);
   min-height: 100vh;
 }
+p {
+  font-size: 20px;
+}
 /* small */
 @media (min-width: 768px) {
   .container {
@@ -223,7 +226,7 @@ header .container {
   z-index: 99999;
 }
 header .img-link {
-  height: 110px;
+  height: 100px;
 }
 @media (min-width: 1024px) {
   header .container .menu-bars {
@@ -302,7 +305,7 @@ header .container nav .inner-ul {
   opacity: 0;
   transition: opacity var(--transition-300), height var(--transition-300);
   background-color: white;
-  box-shadow: 0 0px 50px -20px var(--dark-clr);
+  box-shadow: 0 0px 50px -40px var(--dark-clr);
   background-color: white;
 }
 header .container nav .inner-ul li a {
@@ -374,6 +377,9 @@ header .container .logo {
   }
 }
 @media (max-width: 768px) {
+  p {
+    font-size: 16px;
+  }
   header .container nav .main-ul {
     width: 100%;
     left: 0;
@@ -381,8 +387,8 @@ header .container .logo {
   header {
     padding: 10px 0;
   }
-  header .container .logo {
-    height: 50px;
+  header .img-link {
+    height: 60px;
   }
   header .container .menu-bars {
     font-size: 24px;
@@ -459,7 +465,7 @@ main .summary div img {
 }
 main .summary div p {
   text-align: justify;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 /* === END SUMMARY SECTION === */
 
