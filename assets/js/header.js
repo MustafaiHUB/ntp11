@@ -13,6 +13,7 @@ const headerHTML = `
 <span class="menu-bars">&#9776;</span>
 <nav class="nav">
   <ul class="main-ul">
+    <li><a href="/index.html">Home</a></li>
     <li><a href="/pages/about.html">About NTP</a></li>
     <li><a href="/pages/organizers.html">Organizers</a></li>
     <li><a href="/pages/sponsers.html">Sponsers</a></li>
