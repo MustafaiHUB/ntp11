@@ -11,6 +11,7 @@ const setSlidePosition = (slide, index) => {
 }
 
 let currentIndex = 0
+let skipThisInterval = false
 let goBackwards = false
 
 slides.forEach(setSlidePosition)
@@ -60,6 +61,7 @@ const prevImg = () => {
 prevButton.addEventListener("click", prevImg)
 
 dotsNav.addEventListener("click", (e) => {
+  skipThisInterval = true
   const targetDot = e.target.closest("button")
   if (!targetDot) return
   const currentSlide = track.querySelector(".current-slide")
@@ -73,6 +75,11 @@ dotsNav.addEventListener("click", (e) => {
 })
 
 setInterval(() => {
+  // fixes bug where slideshow might go to next image immediately after the user clicked on a dot
+  if (skipThisInterval) {
+    skipThisInterval = false
+    return
+  }
   if (!goBackwards) {
     currentIndex++
     if (currentIndex >= slides.length) {

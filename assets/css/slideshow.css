@@ -76,7 +76,7 @@
 .carousel__nav {
   display: flex;
   justify-content: center;
-  /* padding: 20px 0; */
+  padding: 20px 0;
   gap: 1rem;
 }
 .carousel__indicator {

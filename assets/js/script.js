@@ -17,9 +17,11 @@ let innerMenuFlag = false
 menuBtn.addEventListener("click", function () {
   if (menuFlag) {
     nav.style.opacity = "0"
+    nav.style.pointerEvents = "none"
     menuFlag = false
   } else {
     nav.style.opacity = "1"
+    nav.style.pointerEvents = "auto"
     menuFlag = true
   }
 })

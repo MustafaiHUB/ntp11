@@ -142,7 +142,7 @@ section:last-of-type {
   height: 40px;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 20px;
   background-color: var(--primary-clr);
   border-radius: 10px;
   transition: var(--transition-300);
@@ -384,6 +384,7 @@ header .container .logo {
 @media (max-width: 1024px) {
   header .container nav {
     opacity: 0;
+    pointer-events: none;
     transition: opacity var(--transition-500);
   }
   header .container nav .main-ul {
