@@ -1,0 +1,13 @@
+/* START MAIN */
+main .container {
+  padding-top: var(--padding-top-100);
+  padding-bottom: var(--padding-bottom-100);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  align-items: center;
+}
+main .container img {
+  width: 100%;
+  mix-blend-mode: color;
+}
+/* END MAIN */

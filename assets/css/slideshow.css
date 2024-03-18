@@ -7,6 +7,7 @@
   margin-bottom: 5rem;
   margin-block-start: 20px;
 }
+
 .carousel__images {
   /* max-width: 500px; */
   width: 100%;
@@ -14,7 +15,6 @@
   object-fit: contain;
 }
 .carousel__track-container {
-  /* background: pink; */
   height: 100%;
   width: 50%;
   position: relative;
@@ -22,6 +22,16 @@
   transform: translateX(-50%);
   overflow: hidden;
   border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .carousel__track-container {
+    width: 70%;
+  }
+}
+@media (max-width: 585px) {
+  .carousel__track-container {
+    width: 80%;
+  }
 }
 .carousel__track {
   padding: 0;
