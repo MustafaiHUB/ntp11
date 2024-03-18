@@ -376,6 +376,17 @@ footer .container p {
   text-align: justify;
   font-size: 20px;
 }
+.arabic {
+  text-align: right;
+}
+.arabic-header {
+  font-size: 24px;
+}
+.arabic-text {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
 /*.about-header:after {*/
 /*    margin-top: 5px;*/
 /*    content: ' ';*/
@@ -395,13 +406,47 @@ hr.style14 {
 .about-list-element-primary {
   background-color: var(--primary-clr);
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 10px 10px 5px;
+  /*padding: 10px;*/
+  display: flex;
+  vertical-align: top;
+  align-content: flex-start;
+}
+.about-list-element-primary::before {
+  display: block;
+  content: "";
+  min-width: 15px;
+  min-height: 15px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--light-clr);
+  left: -25px;
+  top: -25px;
+  position: relative;
 }
 .about-list-element-light {
   background-color: var(--light-clr);
   border-radius: 5px;
-  padding: 10px;
+  /*padding: 10px;*/
+  padding: 10px 10px 10px 5px;
+  display: flex;
+  vertical-align: top;
 }
+.about-list-element-light::before {
+  display: block;
+  content: "";
+  min-width: 15px;
+  min-height: 15px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--primary-clr);
+  left: -25px;
+  top: -25px;
+  position: relative;
+}
+/*body, html { height: 100%; }  */
 .about-link {
   /*color: var(--primary-clr);*/
   font-weight: bold;
@@ -410,6 +455,12 @@ hr.style14 {
 .about-link:hover {
   text-decoration: underline;
   color: var(--primary-clr);
+}
+.about-ul {
+  list-style-type: -moz-arabic-indic;
+  position: relative;
+  font-size: 17px;
+  left: -7px;
 }
 /* === END ABOUT === */
 
@@ -426,5 +477,33 @@ hr.style14 {
   font-weight: bold;
   justify-content: flex-end;
 }
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 20px;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+  background-color: var(--primary-clr);
+  text-align: left;
+  font-size: 25px;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid var(--primary-clr);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: var(--light-clr);
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 4px solid var(--primary-clr)
+}
+
 
 /* === END DATES === */
