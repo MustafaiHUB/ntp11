@@ -79,12 +79,7 @@ p {
   padding: 0 20px;
   margin: 0 auto;
 }
-ul,
-ol {
-  /* margin-inline-start: 30px; */
-}
 ul li {
-  /* list-style: none; */
   cursor: text;
 }
 a {
@@ -212,35 +207,6 @@ section:last-of-type {
   margin-bottom: 20px;
 }
 /* Floating Social Media Bar Style Ends Here */
-
-/* Start background image */
-.background-img {
-  height: 400px;
-  position: absolute;
-  z-index: -1;
-}
-@media (max-width: 992px) {
-  .background-img {
-    display: none;
-  }
-}
-.background-img-1 {
-  top: 7%;
-  left: -3%;
-}
-.background-img-2 {
-  top: 30%;
-  right: -3%;
-}
-.background-img-3 {
-  top: 80%;
-  left: 5%;
-}
-.background-img-4 {
-  top: 90%;
-  right: 5%;
-}
-/* End background image */
 /* === END GLOBAL === */
 
 /* === START HEADER === */
