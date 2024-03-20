@@ -41,9 +41,9 @@ const headerHTML = `
     </li>
     <li>
       <a
-        href="#"
+        href="/pages/submission.html"
         class="registration"
-        >Registration</a
+        >Project Submission</a
       >
     </li>
   </ul>
