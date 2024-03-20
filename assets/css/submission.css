@@ -1,0 +1,4 @@
+h3 a {
+  color: var(--primary-clr);
+  display: inline-block;
+}
