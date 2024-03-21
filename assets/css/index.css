@@ -64,5 +64,12 @@
   font-style: italic;
   color: #666;
   font-size: medium;
+  text-align: center;
+}
+.click-here-submit {
+  font-style: italic;
+  color: var(--primary-clr);
+  font-size: medium;
+  text-align: center;
 }
 /* End News Section */

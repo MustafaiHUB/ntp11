@@ -2,13 +2,16 @@
 main .container {
   padding-top: var(--padding-top-100);
   padding-bottom: var(--padding-bottom-100);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+  display: flex;
+  gap: 100px;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
 }
 main .container img {
-  width: 100%;
-  mix-blend-mode: color;
+  max-height: 200px;
 }
+main .container img.IEEE {
+  max-height: 150px;
+}
+
 /* END MAIN */
