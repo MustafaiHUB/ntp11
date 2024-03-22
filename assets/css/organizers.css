@@ -1,4 +1,7 @@
 /* START MAIN */
+main {
+  min-height: fit-content;
+}
 main .container {
   padding-top: var(--padding-top-100);
   padding-bottom: var(--padding-bottom-100);
@@ -13,5 +16,17 @@ main .container img {
 main .container img.IEEE {
   max-height: 150px;
 }
-
+@media (max-width: 768px) {
+  main .container img {
+    max-height: 120px;
+  }
+  main .container img.IEEE {
+    max-height: 80px;
+  }
+}
+@media (max-width: 585px) {
+  main .container {
+    flex-direction: column;
+  }
+}
 /* END MAIN */

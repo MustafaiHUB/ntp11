@@ -19,7 +19,7 @@ const headerHTML = `
     <li><a href="/pages/sponsers.html">Sponsers</a></li>
     <li class="sub-menu">
       <div>
-        <a href="/pages/projects.html">Projects Competition</a>
+        <a href="/pages/participants.html">Projects Competition</a>
         <span class="open-ul-mobile">&#10549;</span>
       </div>
       <ul class="inner-ul">

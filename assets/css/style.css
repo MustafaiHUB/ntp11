@@ -464,9 +464,15 @@ main .main-container .sidebar-side > div p {
 main .summary div img {
   width: 100%;
 }
-main .summary div p {
+main .summary p {
   text-align: justify;
   /* font-size: 20px; */
+}
+main .summary ul {
+  padding: 0 20px;
+}
+main .summary ul li {
+  text-align: justify;
 }
 /* === END SUMMARY SECTION === */
 

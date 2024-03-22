@@ -1,3 +1,7 @@
+main {
+  min-height: fit-content;
+  margin: 100px auto !important;
+}
 .contactus {
   max-width: 800px;
   margin: 20px auto;
