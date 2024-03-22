@@ -16,7 +16,7 @@ const headerHTML = `
     <li><a href="/index.html">Home</a></li>
     <li><a href="/pages/about.html">About NTP</a></li>
     <li><a href="/pages/organizers.html">Organizers</a></li>
-    <li><a href="/pages/sponsers.html">Sponsers</a></li>
+    <li><a href="/pages/sponsors.html">Sponsors</a></li>
     <li class="sub-menu">
       <div>
         <a href="/pages/participants.html">Projects Competition</a>
@@ -56,8 +56,7 @@ const footerHTML = `<div class="footerContainer">
   <div class="footer-content">
     <div class="footer-section">
       <h3>Contact Us</h3>
-      <p>Email: info@example.com</p>
-      <p>Phone: +123 456 7890</p>
+      <p>Email: ntp11ju@gmail.com</p>
     </div>
     <div class="footer-section">
       <h3>Quick Links</h3>
@@ -70,9 +69,7 @@ const footerHTML = `<div class="footerContainer">
     <div class="footer-section">
       <h3>Follow Us</h3>
       <ul class="social-links">
-        <li><a href="#" target="_blank">Facebook</a></li>
-        <li><a href="#" target="_blank">Twitter</a></li>
-        <li><a href="#" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/NTPJo?mibextid=uzlsIk" target="_blank">Facebook</a></li>
       </ul>
     </div>
   </div>
@@ -82,10 +79,11 @@ const footerHTML = `<div class="footerContainer">
 </div>`
 document.body.insertAdjacentHTML("beforeend", footerHTML)
 
-const socialMediabar = `<!-- Floating Social Media bar Starts -->
+const socialMediabar = `
+<!-- Floating Social Media bar Starts -->
     <div class="float-sm">
       <div class="fl-fl float-fb">
-        <a href="https://www.facebook.com/" target="_blank"
+        <a href="https://www.facebook.com/NTPJo?mibextid=uzlsIk" target="_blank"
           ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="15px"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fff" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a>
       </div>
     </div>

@@ -490,6 +490,7 @@ main .summary ul li {
   justify-content: space-between;
   width: 100%;
 }
+
 .footer-section {
   flex: 1;
   margin-right: 20px;
@@ -509,7 +510,7 @@ main .summary ul li {
 }
 
 .footer-section h3 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 
@@ -524,12 +525,19 @@ main .summary ul li {
 }
 
 .footer-section li a {
-  color: #fff;
+  color: #ffff;
   margin-bottom: 5px;
+  transition: var(--transition-300);
+}
+
+.footer-section li a:hover {
+  color: var(--primary-clr);
 }
 
 .footer-bottom {
+  border-top: 3px solid var(--primary-clr);
   margin-top: 20px;
+  padding-top: 20px;
   text-align: center;
 }
 
